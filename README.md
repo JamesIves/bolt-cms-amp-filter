@@ -1,37 +1,40 @@
-Bolt CMS ⚡ HTML to AMP HTML
-======================
+# Bolt CMS ⚡ HTML to AMP HTML Filter
 
-This is a Bolt CMS extension which converts blocks of regular HTML to AMP compliant HTML using a Twig filter. This project is made possible thanks to the Lullabot PHP AMP Library. 
+[Bolt CMS](https://bolt.cm/) extension which converts blocks of regular HTML to [AMP compliant HTML](https://www.ampproject.org/) using a Twig filter. This project is made possible thanks to the [Lullabot PHP AMP Library](https://github.com/Lullabot/amp-library). 
 
 ## Installation
 TODO
 
-### Dependancies
-You may need to install the Lullaobt AMP Library inside the project root compose.json file in order for this extension to access it, simply run the following:
+#### Dependancies
+You may need to install the Lullabot AMP PHP library inside your Bolt CMS root in order for this extension to work. This can be achieved by running the following command inside the root of your Bolt project.
 
 ```
+$ composer require lullabot/amp:"^1.0.0"
 ```
 
 ## Usage
-In your Twig template all you need to is add the `amp` filter, for example `{{ record.body|amp }}`.
-
-If the filter finds any form of rich media content such as a YouTube video or image it will automatically convert it. 
+In your Twig templates all you need to is add the `amp` filter, for example `{{ record.body|amp }}`. If the filter finds any form of rich media content such as a YouTube embed or image it will automatically convert it to the AMP equivalent.
 
 ```
-<div><img alt="This is an image" src="/files/1461.png"></div>
+<div>
+  <img alt="This is an image" src="/files/1461.png">
+</div>
 ```
 
 Will become the following:
 
 ```
-<p><amp-img alt="" src="/files/1461.png" width="567" height="500" layout="responsive"></amp-img></p>
+<div>
+  <amp-img alt="" src="/files/1461.png" width="567" height="500" layout="responsive"></amp-img>
+</div>
 ```
 
-### PHP Built In Server
-* The PHP built-in server has issues obtaining a proper response from locally stored images. If you run into this issue I suggest updating your development enviroment to Docker.
-* For additional caveats I'd suggest checking out the README in the Lullabot AMP Library repo as they apply to this extension too.
+#### Local Development
+The built in PHP server configuration that is packaged with Bolt CMS may prevent this extension from working properly when it encounters images, this is due to how it handles the requests. If you encounter these issues I'd suggest using the Bolt CMS Docker container instead for local development.
 
 ## Configuration
-Inside the Bolt generated `amphtml.jamesives.yml` file you'll find the configuration file for this extension.
+Inside the generated configuration file you'll find some options which can be used to customize this extension.
 
-TODO: Add configuration
+| Option | Description | Type |
+| ------------- | ------------- | ------------- |
+| `show_action_log`  |  Prints on the page what the AMP library converted and why. | boolean (Defaults to false) |
