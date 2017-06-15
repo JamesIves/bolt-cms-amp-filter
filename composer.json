@@ -1,0 +1,38 @@
+{
+    "name": "bolt/amp-html-filter",
+    "description": "Twig filter for Bolt CMS which converts a blocks of regular HTML to AMP-HTML.",
+    "type": "bolt-extension",
+    "keywords": [ "amp", "google", "twig", "filter"
+    ],
+    "require": {
+        "bolt/bolt": "^3.0.0",
+        "lullabot/amp": "^1.0.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.7"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "James Ives",
+            "email": "iam@jamesiv.es"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Bolt\\Extension\\JamesIves\\AmpHtml\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bolt\\Extension\\JamesIves\\AmpHtml\\Tests\\": "tests",
+            "Bolt\\Tests\\": "vendor/bolt/bolt/tests/phpunit/unit/"
+        }
+    },
+    "extra": {
+        "bolt-assets": "web",
+        "bolt-class": "Bolt\\Extension\\JamesIves\\AmpHtml\\AmpHtmlExtension"
+    }
+}
