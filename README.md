@@ -25,7 +25,7 @@ Will become the following:
 
 ```
 <div>
-  <amp-img alt="" src="/files/1461.png" width="567" height="500" layout="responsive"></amp-img>
+  <amp-img alt="This is an image" src="/files/1461.png" width="567" height="500" layout="responsive"></amp-img>
 </div>
 ```
 
