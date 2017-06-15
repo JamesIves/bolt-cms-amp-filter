@@ -3,7 +3,7 @@
 [Bolt CMS](https://bolt.cm/) extension which converts blocks of regular HTML to [AMP compliant HTML](https://www.ampproject.org/) using a Twig filter. This project is made possible thanks to the [Lullabot PHP AMP Library](https://github.com/Lullabot/amp-library). 
 
 ## Installation
-TODO
+This extension can be installed via the Bolt CMS "Extend" menu in the admin control panel. Simply search for `jamesives/bolt-cms-amp-filter` to install the desired version.
 
 #### Dependancies
 You may need to install the Lullabot AMP PHP library inside your Bolt CMS root in order for this extension to work. This can be achieved by running the following command inside the root of your Bolt project.
