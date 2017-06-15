@@ -30,7 +30,7 @@ Will become the following:
 ```
 
 #### Local Development
-The built in PHP server configuration that is packaged with Bolt CMS may prevent this extension from working properly when it encounters images, this is due to how it handles the requests. If you encounter these issues I'd suggest using the Bolt CMS Docker container instead for local development.
+The built in PHP server configuration that is packaged with Bolt CMS may prevent this extension from working properly when it encounters images, this is due to how it handles the requests. If you encounter these issues I'd suggest using the [Bolt CMS Docker container](https://github.com/rossriley/docker-bolt) instead for local development. Special thanks to Christian for the help debugging this issue! 
 
 ## Configuration
 Inside the generated configuration file you'll find some options which can be used to customize this extension.
