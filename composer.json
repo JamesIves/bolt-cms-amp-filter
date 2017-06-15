@@ -1,5 +1,5 @@
 {
-    "name": "bolt-cms-amp-filter",
+    "name": "JamesIves/bolt-cms-amp-filter",
     "description": "Twig filter for Bolt CMS which converts a blocks of regular HTML to AMP-HTML.",
     "type": "bolt-extension",
     "keywords": [ "amp", "google", "twig", "filter", "amphtml", "html"
