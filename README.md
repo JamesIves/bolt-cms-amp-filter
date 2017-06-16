@@ -1,6 +1,6 @@
 # Bolt CMS ⚡ HTML to AMP HTML Filter
 
-[Bolt CMS](https://bolt.cm/) extension which converts blocks of regular HTML to [AMP compliant HTML](https://www.ampproject.org/) using a Twig filter. This project is made possible thanks to the [Lullabot PHP AMP Library](https://github.com/Lullabot/amp-library). 
+This is a [Bolt CMS](https://bolt.cm/) extension which converts blocks of regular HTML to [AMP compliant HTML](https://www.ampproject.org/) using a Twig filter. This project is made possible thanks to the [Lullabot PHP AMP Library](https://github.com/Lullabot/amp-library). 
 
 ## Installation
 This extension can be installed via the Bolt CMS "Extend" menu in the admin control panel. Simply search for `jamesives/bolt-cms-amp-filter` to install the desired version.
