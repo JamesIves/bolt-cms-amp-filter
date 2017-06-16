@@ -13,7 +13,7 @@ $ composer require lullabot/amp:"^1.0.0"
 ```
 
 ## Usage
-In your Twig templates all you need to is add the `amp` filter, for example `{{ record.body|amp }}`. If the filter finds any form of rich media content such as a YouTube embed or image it will automatically convert it to the AMP equivalent.
+In your Twig templates all you need to is add the `amp` filter to the HTML you'd like to convert, for example `{{ record.body|amp }}`. If the filter finds any form of rich media content such as a YouTube embed or image it will automatically convert it to the AMP equivalent.
 
 ```
 <div>
@@ -27,6 +27,15 @@ Will become the following:
 <div>
   <amp-img alt="This is an image" src="/files/1461.png" width="567" height="500" layout="responsive"></amp-img>
 </div>
+```
+
+If you'd like to return the converted AMP HTML so you can check for content within it you can do so by using the `ampraw` filter, for example `{{ record.body|ampraw }}`. This is useful if you want to check if the content contains a certain type of AMP component so you can systematically place the JavaScript for it in the page header.
+
+```
+{% set body = record.body|ampraw %}
+  {% if 'amp-youtube' in body %}
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>   
+  {% endif %}
 ```
 
 #### Local Development

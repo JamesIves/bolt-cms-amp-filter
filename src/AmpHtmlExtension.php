@@ -19,7 +19,8 @@ class AmpHtmlExtension extends SimpleExtension
     protected function registerTwigFilters()
     {
         return [
-            'amp'  => 'ampFilter' 
+            'amp'  => 'ampFilter',
+            'ampraw' => 'ampReturn' 
         ];
     }
 
@@ -35,17 +36,28 @@ class AmpHtmlExtension extends SimpleExtension
     public function ampFilter($input)
     {
 
+        /* Converts $input into AMP compliant HTML and prints it on the page. */
         $config = $this->getConfig();
+        $amp_html = $this->ampReturn($input);
+        echo $amp_html;
 
-        /* Converts $input into AMP compliant HTML */
+        if ($config['debug']['show_action_log'] == true) print($amp->warningsHumanText());
+    }
+
+    public function ampReturn($input)
+    {
+        /* Converts $input into AMP compliant HTML but returns it to the calling filter or function
+        this allows you to do things such as   
+        
+        {% setcontent body = record.body|ampraw %}
+        {% if 'amp-youtube' in body %}
+        {% endif %} */
+
         $html = (string)$input;
         $amp = new AMP();
         $amp->loadHtml($html);
         $amp_html = $amp->convertToAmpHtml();
 
-        print $amp_html;
-
-        if ($config['debug']['show_action_log'] == true) print($amp->warningsHumanText());
+        return $amp_html;
     }
-
 }
