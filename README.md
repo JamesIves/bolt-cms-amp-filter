@@ -6,7 +6,7 @@ This is a [Bolt CMS](https://bolt.cm/) extension which converts blocks of regula
 This extension can be installed via the Bolt CMS "Extend" menu in the admin control panel. Simply search for `jamesives/bolt-cms-amp-filter` to install the desired version.
 
 #### Dependancies
-You may need to install the Lullabot AMP PHP library inside your Bolt CMS root in order for this extension to work. This can be achieved by running the following command inside the root of your Bolt project.
+You may need to install the Lullabot AMP PHP library inside your Bolt CMS root in order for this extension to work. This can be achieved by running the following [Composer](https://getcomposer.org/) command inside the root of your Bolt project.
 
 ```
 $ composer require lullabot/amp:"^1.0.0"
