@@ -19,6 +19,8 @@
             "homepage": "https://jamesiv.es"
         }
     ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "Bolt\\Extension\\JamesIves\\AmpHtml\\": "src"
