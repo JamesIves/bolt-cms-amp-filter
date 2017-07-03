@@ -39,7 +39,7 @@ If you'd like to return the converted AMP HTML so you can check for content with
 ```
 
 #### Issues with Images
-The built in PHP server configuration that is packaged with Bolt CMS may prevent this extension from working properly when it encounters images, this is due to how it handles the requests. If you encounter these issues I'd suggest using the [Bolt CMS Docker container](https://github.com/rossriley/docker-bolt) instead, with this you can setup an `extra_hosts` field in the `docker-compose.yml` file and map the Docker container to the host machine. 
+The built in PHP server configuration that is packaged with Bolt CMS may prevent this extension from working properly when it encounters images, this is due to how it handles the requests. If you encounter these issues I'd suggest using the [Bolt CMS Docker container](https://github.com/rossriley/docker-bolt) instead, with this you can setup an `extra_hosts` field in the `docker-compose.yml` file and map the Docker container to the host machine, which will allow the PHP to access the images properly.
 
 ```
 extra_hosts:
