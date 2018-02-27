@@ -35,13 +35,10 @@ class AmpHtmlExtension extends SimpleExtension
 
     public function ampFilter($input)
     {
-
         /* Converts $input into AMP compliant HTML and prints it on the page. */
         $config = $this->getConfig();
         $amp_html = $this->ampReturn($input);
         echo $amp_html;
-
-        if ($config['debug']['show_action_log'] == true) print($amp->warningsHumanText());
     }
 
     public function ampReturn($input)
@@ -57,6 +54,7 @@ class AmpHtmlExtension extends SimpleExtension
         $amp = new AMP();
         $amp->loadHtml($html);
         $amp_html = $amp->convertToAmpHtml();
+        if ($config['debug']['show_action_log'] == true) print($amp->warningsHumanText());
 
         return $amp_html;
     }
