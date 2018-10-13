@@ -13,7 +13,7 @@ $ composer require lullabot/amp:"^1.0.0"
 ```
 
 ## Usage
-In your Twig templates all you need to is add the `amp` filter to the HTML you'd like to convert, for example `{{ record.body|amp }}`. If the filter finds any form of rich media content such as a YouTube embed or image it will automatically convert it to the AMP equivalent.
+In your Twig templates all you need to do is add the `amp` filter to the HTML you'd like to convert, for example `{{ record.body|amp }}`. If the filter finds any form of rich media content such as a YouTube embed or image it will automatically convert it to the AMP equivalent.
 
 ```
 <div>
