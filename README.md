@@ -1,4 +1,4 @@
-# Bolt CMS ⚡ HTML to AMP HTML Filter
+# Bolt CMS HTML to AMP HTML Filter ⚡
 
 This [Bolt CMS](https://bolt.cm/) converts blocks of regular HTML to [AMP compliant HTML](https://www.ampproject.org/) using a Twig filter.
 
