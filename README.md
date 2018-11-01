@@ -1,6 +1,6 @@
 # Bolt CMS HTML to AMP HTML Filter ⚡
 
-This [Bolt CMS](https://bolt.cm/) converts blocks of regular HTML to [AMP compliant HTML](https://www.ampproject.org/) using a Twig filter.
+This [Bolt CMS](https://bolt.cm/) extension converts blocks of regular HTML to [AMP compliant HTML](https://www.ampproject.org/) using a Twig filter.
 
 ## Installation Steps 💽
 This extension can be installed via the Bolt CMS "**Extend**" menu in the admin control panel. Search for `jamesives/bolt-cms-amp-filter` to install.
