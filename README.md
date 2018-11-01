@@ -1,18 +1,19 @@
 # Bolt CMS ⚡ HTML to AMP HTML Filter
 
-This is a [Bolt CMS](https://bolt.cm/) extension which converts blocks of regular HTML to [AMP compliant HTML](https://www.ampproject.org/) using a Twig filter. This project is made possible thanks to the [Lullabot PHP AMP Library](https://github.com/Lullabot/amp-library). 
+This [Bolt CMS](https://bolt.cm/) converts blocks of regular HTML to [AMP compliant HTML](https://www.ampproject.org/) using a Twig filter.
 
-## Installation
-This extension can be installed via the Bolt CMS "Extend" menu in the admin control panel. Search for `jamesives/bolt-cms-amp-filter` to install the desired version.
+## Installation Steps 💽
+This extension can be installed via the Bolt CMS "**Extend**" menu in the admin control panel. Search for `jamesives/bolt-cms-amp-filter` to install.
 
-#### Required Dependancies
-You need to install the Lullabot AMP PHP library inside your Bolt CMS root in order for this extension to work. This can be achieved by running the following [Composer](https://getcomposer.org/) command inside the root of your Bolt project.
+---
+
+You need to install the [Lullabot AMP PHP library](https://github.com/Lullabot/amp-library) in your Bolt CMS root in order for this extension to work correctly. This can be achieved by running the following [Composer](https://getcomposer.org/) command inside the root of your Bolt project.
 
 ```
 $ composer require lullabot/amp:"^1.0.0"
 ```
 
-## Usage
+## Usage 🎬
 In your Twig templates all you need to do is add the `amp` filter to the HTML you'd like to convert, for example `{{ record.body|amp }}`. If the filter finds any form of rich media content such as a YouTube embed or image it will automatically convert it to the AMP equivalent.
 
 ```
@@ -48,7 +49,7 @@ extra_hosts:
 
 Special thanks to [Christian](https://github.com/CristianAThompson) for the help debugging this issue! 
 
-## Configuration
+## Configuration 📁
 Inside the generated configuration file you'll find some options which can be used to customize this extension.
 
 | Option | Description | Type |
